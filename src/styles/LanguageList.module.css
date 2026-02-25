@@ -1,0 +1,114 @@
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.85rem;
+}
+
+.card {
+  position: relative;
+}
+
+.link {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  border-radius: 18px;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  background: linear-gradient(170deg, rgba(18, 49, 80, 0.95) 0%, rgba(8, 24, 43, 0.94) 100%);
+  box-shadow: 0 12px 34px rgba(3, 14, 29, 0.4);
+  min-height: 245px;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.link:hover {
+  transform: translateY(-4px);
+  border-color: rgba(167, 213, 255, 0.42);
+}
+
+.glow {
+  position: absolute;
+  width: 128px;
+  height: 128px;
+  border-radius: 24px;
+  top: -32px;
+  right: -24px;
+  opacity: 0.2;
+  transform: rotate(22deg);
+}
+
+.head {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.8rem;
+  align-items: start;
+}
+
+.badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  font-size: 0.86rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(9, 22, 39, 0.7);
+  border: 1px solid rgba(150, 201, 247, 0.3);
+}
+
+.head h3 {
+  font-size: 1.08rem;
+}
+
+.head p {
+  margin-top: 0.35rem;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.meta {
+  margin-top: 0.82rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.meta span,
+.tags span {
+  border-radius: 999px;
+  border: 1px solid rgba(157, 207, 252, 0.28);
+  background: rgba(4, 16, 30, 0.48);
+  padding: 0.26rem 0.62rem;
+  font-size: 0.78rem;
+}
+
+.tags {
+  margin-top: 0.55rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.popularity {
+  margin-top: 0.8rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid rgba(157, 207, 252, 0.22);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.popularity span {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.popularity strong {
+  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+  font-size: 1.1rem;
+}
